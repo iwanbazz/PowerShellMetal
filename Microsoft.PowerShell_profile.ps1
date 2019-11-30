@@ -23,7 +23,7 @@ function fed() {sudo Start-VM -Name Fedora}
 function install() {sudo choco install -y $args}
 function lnew() {laravel new $args}
 function rh() {sudo Start-VM -Name Redhat}
-function up() {sudo Get-WindowsUpdate; sudo choco upgrade all -y; scoop update *; composer global update; npm update -g}
+function up() {sudo Install-WindowsUpdate -y; sudo choco upgrade all -y; scoop update *; composer global update; npm update -g}
 
 # Alias other
 function wa() {l wsl-alias add $args}
